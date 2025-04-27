@@ -1,0 +1,11 @@
+_format_version: "2.1"
+_transform: true
+
+services:
+  - name: auth-service
+    url: http://auth-backend:3001
+    routes:
+      - name: auth-route
+        paths:
+          - /auth
+        strip_path: true
