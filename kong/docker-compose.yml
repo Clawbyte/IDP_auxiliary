@@ -19,8 +19,11 @@ services:
       - ./kong.yml:/etc/kong/kong.yml
     networks:
       - kong-net
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
 
 networks:
   kong-net:
-    name: kong-net
-    driver: bridge
+    external: true
