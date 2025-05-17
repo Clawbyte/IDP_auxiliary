@@ -9,3 +9,10 @@ services:
         paths:
           - /auth
         strip_path: true
+  - name: logic-service
+    url: http://logic-backend:3002
+    routes:
+      - name: logic-route
+        paths:
+          - /logic
+        strip_path: true
