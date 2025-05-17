@@ -16,3 +16,10 @@ services:
         paths:
           - /logic
         strip_path: true
+  - name: portainer-service
+    url: http://portainer:9000
+    routes:
+      - name: portainer-route
+        paths:
+          - /portainer
+        strip_path: true
